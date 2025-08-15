@@ -21,6 +21,8 @@
 
 <br>
 
+**The bot's language has been translated to English.**
+
 ## ✨ Features
 
 ### 📊 **Automated Reporting**
@@ -47,6 +49,7 @@
 - **Trello-Telegram Mapping** - Link Trello users with Telegram usernames
 - **Personal Task Views** - Individual task reports per user
 - **Smart Tagging** - Automatic mentions in notifications
+
 
 ## 🚀 Quick Start
 
@@ -100,16 +103,7 @@ poetry install
        "trello_username": "@telegram_username"
    ```
 
-3. **Alternative: Environment Variables**:
-   You can also use environment variables (they override config.yaml values):
-   ```bash
-   export TELEGRAM_API_TOKEN="your_bot_token"
-   export PEER_ID="your_chat_id"
-   export TRELLO_API_KEY="your_api_key"
-   export TRELLO_TOKEN="your_token"
-   ```
-
-4. **Get your credentials**:
+3. **Get your credentials**:
    - **Telegram Bot Token**: Message [@BotFather](https://t.me/BotFather) on Telegram
    - **Trello API Key & Token**: Visit [https://trello.com/app-key](https://trello.com/app-key)
    - **Chat ID**: Add your bot to a group/channel and check the logs, or use [@userinfobot](https://t.me/userinfobot)
