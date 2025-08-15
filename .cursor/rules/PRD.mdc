@@ -3,76 +3,75 @@
 
 ### Project Overview
 **Product Name:** Trello Telegram Tracker Bot
-**Type:** Telegram Bot для мониторинга досок Trello
+**Type:** Telegram Bot for Trello board monitoring
 **Language:** Python 3.12+
-**Architecture:** Асинхронная модульная архитектура
+**Architecture:** Asynchronous modular architecture
 
 ### Core Purpose
-Автоматизация мониторинга и отчетности по доскам Trello через Telegram бота с уведомлениями в реальном времени и автоматическими отчетами.
+Automation of monitoring and reporting on Trello boards via a Telegram bot with real-time notifications and automated reports.
 
 ### Key Features
 
 #### 1. Real-time Monitoring
-- **Card Completion Tracking:** Автоматические уведомления о завершении карточек
-- **Member Assignment Notifications:** Уведомления о назначении участников на задачи
-- **Long-running Task Detection:** Индикация задач в работе более 3 дней (🐌)
-- **Continuous Monitoring:** Проверка изменений каждые 30 секунд
+- **Card Completion Tracking:** Automatic notifications when cards are completed
+- **Member Assignment Notifications:** Notifications when members are assigned to tasks
+- **Long-running Task Detection:** Indication of tasks in progress for more than 3 days (🐌)
+- **Continuous Monitoring:** Checking for changes every 30 seconds
 
 #### 2. Automated Reporting
-- **Daily Reports:** Ежедневные отчеты (пн-сб в 8:00) с просроченными и текущими задачами
-- **Weekly Statistics:** Еженедельная статистика (пн в 00:00) с выполненными задачами
-- **Report Pinning:** Автоматическое закрепление отчетов с удалением старых
+- **Daily Reports:** Daily reports (Mon-Sat at 8:00 AM) with overdue and current tasks
+- **Weekly Statistics:** Weekly statistics (Mon at 12:00 AM) with completed tasks
+- **Report Pinning:** Automatic pinning of reports with deletion of old ones
 
 #### 3. Interactive Commands
-- `/start` - Справка и список команд
-- `/ct` - Текущий отчет по всем доскам
-- `/wr` - Еженедельная статистика
-- `/mt` - Персональные задачи пользователя
-- `/stored` - Показать закрепленные сообщения
-- `/unpin MESSAGE_ID` - Открепить сообщение
-- `/clear_stored` - Очистить сохраненные сообщения
-- `/debug_file` - Показать файл хранения
+- `/start` - Help and list of commands
+- `/ct` - Current report for all boards
+- `/wr` - Weekly statistics
+- `/mt` - Personal tasks of the user
+- `/stored` - Show pinned messages
+- `/unpin MESSAGE_ID` - Unpin message
+- `/clear_stored` - Clear saved messages
+- `/debug_file` - Show storage file
 
 #### 4. User Management
-- **Trello-Telegram Mapping:** Связывание пользователей Trello с Telegram username
-- **Personal Task Views:** Персональные отчеты по задачам пользователя
-- **Tag Notifications:** Автоматические упоминания в уведомлениях
+- **Trello-Telegram Mapping:** Linking Trello users with Telegram usernames
+- **Personal Task Views:** Personal task reports for the user
+- **Tag Notifications:** Automatic mentions in notifications
 
 ### Technical Architecture
 
 #### Core Components
-1. **AsyncTrelloBot** (`bot.py`) - Основной класс бота с aiogram
-2. **TrelloAPI** (`trello_api.py`) - Интеграция с Trello API
-3. **CommandHandlers** (`handlers.py`) - Обработчики команд
-4. **ReportGenerator** (`reports.py`) - Генерация отчетов
-5. **Storage** (`storage.py`) - Работа с JSON файлами
-6. **Scheduler** (`scheduler.py`) - Планировщик задач
-7. **Config** (`config.py`) - Конфигурация системы
+1. **AsyncTrelloBot** (`bot.py`) - Main bot class with aiogram
+2. **TrelloAPI** (`trello_api.py`) - Integration with Trello API
+3. **CommandHandlers** (`handlers.py`) - Command handlers
+4. **ReportGenerator** (`reports.py`) - Report generation
+5. **Storage** (`storage.py`) - Working with JSON files
+6. **Scheduler** (`scheduler.py`) - Task scheduler
+7. **Config** (`config.py`) - System configuration
 
 #### Technology Stack
-- **Python 3.12+** - Основной язык
+- **Python 3.12+** - Main language
 - **aiogram 3.21+** - Telegram Bot framework
-- **aiohttp 3.9+** - Асинхронные HTTP запросы
-- **aiofiles 24.1+** - Асинхронная работа с файлами
-- **schedule 1.2+** - Планировщик задач
-- **Poetry** - Управление зависимостями
+- **aiohttp 3.9+** - Asynchronous HTTP requests
+- **aiofiles 24.1+** - Asynchronous file handling
+- **schedule 1.2+** - Task scheduler
+- **Poetry** - Dependency management
 
 #### Data Storage
-- **JSON Files:** Хранение состояний карточек и закрепленных сообщений
-- **In-Memory State:** Кэширование последних состояний досок
-- **Persistent Tracking:** Отслеживание длительных задач
+- **JSON Files:** Storing card states and pinned messages
+- **In-Memory State:** Caching the latest board states
+- **Persistent Tracking:** Tracking long-running tasks
 
 ### Configuration Requirements
 
 #### Required Settings
-- `TELEGRAM_API_TOKEN` - Токен Telegram бота
-- `PEER_ID` - ID чата для отчетов
-- `TRELLO_API_KEY` - API ключ Trello
-- `TRELLO_TOKEN` - Токен Trello
-- `board_ids` - Список ID досок для мониторинга
+- `TELEGRAM_API_TOKEN` - Telegram bot token
+- `PEER_ID` - Chat ID for reports
+- `TRELLO_API_KEY` - Trello API key
+- `TRELLO_TOKEN` - Trello token
+- `board_ids` - List of board IDs to monitor
 
 #### User Mappings
-- `trello_to_telegram_users` - Маппинг пользователей Trello → Telegram
-- `done_list_names` - Названия списков "выполнено"
-- `in_progress_list_names` - Названия списков "в работе"
-
+- `trello_to_telegram_users` - Trello → Telegram user mapping
+- `done_list_names` - Names of the "done" lists
+- `in_progress_list_names` - Names of the "in progress" lists
