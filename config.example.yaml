@@ -1,0 +1,68 @@
+# Trello Telegram Tracker Bot Configuration
+# Copy this file to config.yaml and fill in your actual values
+
+# Telegram Bot Configuration
+telegram:
+  # Your Telegram Bot API token (get from @BotFather)
+  api_token: "YOUR_BOT_TOKEN_HERE"
+
+  # Telegram chat/channel ID where bot will send messages
+  # For groups: use negative ID (e.g., -1002188528272)
+  # For channels: use @channel_name or negative ID
+  peer_id: "YOUR_CHAT_ID_HERE"
+
+  # Chat ID where reports will be sent (usually same as peer_id)
+  report_chat_id: "YOUR_CHAT_ID_HERE"
+
+# Trello API Configuration
+trello:
+  # Your Trello API key (get from https://trello.com/app-key)
+  api_key: "YOUR_TRELLO_API_KEY_HERE"
+
+  # Your Trello token (get from https://trello.com/app-key)
+  token: "YOUR_TRELLO_TOKEN_HERE"
+
+  # List of Trello board IDs to monitor
+  # You can find board ID in the URL: https://trello.com/b/BOARD_ID/board-name
+  board_ids:
+    - "BOARD_ID_1"
+    - "BOARD_ID_2"
+    # Add more board IDs as needed
+
+# User Mapping Configuration
+# Maps Trello usernames to Telegram usernames for mentions
+user_mapping:
+  trello_to_telegram:
+    # Format: "trello_username": "@telegram_username"
+    "trello_user1": "@telegram_user1"
+    "trello_user2": "@telegram_user2"
+    # Add more user mappings as needed
+
+# List Configuration
+# Define which Trello list names represent different statuses
+lists:
+  # Lists that represent completed/done tasks
+  done_status:
+    - "Done"
+    - "Completed"
+    - "Finished"
+    # Add more list names that represent completion
+
+  # Lists that represent work in progress
+  in_progress_status:
+    - "In Progress"
+    - "Doing"
+    - "Working"
+    - "Review / QA"
+    # Add more list names that represent work in progress
+
+# Bot Settings
+settings:
+  # Enable detailed logging (true/false)
+  enable_logging: true
+
+  # Delay between Trello API checks in seconds
+  check_delay: 30
+
+  # Time zone for scheduling (e.g., "UTC", "Europe/Moscow", "America/New_York")
+  timezone: "UTC"
