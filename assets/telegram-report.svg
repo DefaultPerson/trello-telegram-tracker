@@ -1,59 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 480" width="420" height="480">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 420" width="440" height="420">
   <defs>
-    <linearGradient id="msgBg" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#2b5278"/>
-      <stop offset="100%" style="stop-color:#1e3a52"/>
+    <linearGradient id="bubbleBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E2C3A"/>
+      <stop offset="100%" stop-color="#182533"/>
     </linearGradient>
-    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.3"/>
-    </filter>
   </defs>
 
-  <!-- Background (Telegram dark theme) -->
-  <rect width="420" height="480" fill="#0e1621"/>
+  <!-- Background -->
+  <rect width="440" height="420" fill="#0E1621"/>
 
-  <!-- Message bubble -->
-  <rect x="15" y="15" width="390" height="420" rx="12" fill="url(#msgBg)" filter="url(#shadow)"/>
+  <!-- Message bubble (no strong shadow, just subtle) -->
+  <rect x="55" y="12" width="373" height="355" rx="18" fill="url(#bubbleBg)" stroke="#2A3F52" stroke-width="0.5" stroke-opacity="0.3"/>
 
-  <!-- Bot name -->
-  <text x="30" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#6ab3f3">Zaebot</text>
-  <text x="85" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#6b7d8a">zaebal</text>
+  <!-- Bot name row -->
+  <text x="73" y="35" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14" font-weight="600" fill="#8774E1">TrelloBot</text>
+  <text x="410" y="35" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12" fill="#6B7D8A" text-anchor="end">bot</text>
 
   <!-- Title -->
-  <text x="30" y="75" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#ffffff">📊 Ежедневный отчет по Trello</text>
+  <text x="73" y="55" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">📊 Daily Trello Report</text>
 
-  <!-- Divider -->
-  <line x1="30" y1="90" x2="380" y2="90" stroke="#3d5a73" stroke-width="1" opacity="0.5"/>
+  <!-- Project -->
+  <text x="73" y="80" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" fill="#E6EDF3">📁 Project Alpha</text>
 
-  <!-- Project section -->
-  <text x="30" y="120" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#ffffff">📁 Project</text>
+  <!-- Overdue header -->
+  <text x="73" y="98" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" fill="#E6EDF3">⏰ Overdue cards (3):</text>
 
-  <!-- Overdue section -->
-  <text x="30" y="150" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#ff6b6b">😤 Просроченные карточки (5):</text>
-  <text x="30" y="175" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#aab8c2">• 🍪 Разработать API сервиса</text>
-  <text x="45" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6b7d8a">@cleaner</text>
-  <text x="30" y="220" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#aab8c2">• 🍪 Рефакторинг базы данных</text>
-  <text x="45" y="240" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6b7d8a">@cleaner</text>
-  <text x="30" y="265" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#aab8c2">• 🍪 Интеграция с внешним API</text>
-  <text x="45" y="285" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6b7d8a">@cleaner</text>
+  <!-- Overdue items -->
+  <text x="73" y="116" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" fill="#E6EDF3">• 🍪 Fix authentication bug</text>
+  <text x="83" y="130" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11" fill="#5AA7FF">@alice</text>
 
-  <!-- Current section -->
-  <text x="30" y="315" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#4ecdc4">🔄 Текущее (3):</text>
-  <text x="30" y="340" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#aab8c2">• Фикс бага авторизации</text>
-  <text x="45" y="358" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6b7d8a">@arwin</text>
-  <text x="30" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#aab8c2">• Разработка UI компонентов</text>
-  <text x="45" y="398" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6b7d8a">@cleaner</text>
+  <text x="73" y="148" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" fill="#E6EDF3">• 🍪 Update API documentation</text>
+  <text x="83" y="162" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11" fill="#5AA7FF">@bob</text>
+
+  <text x="73" y="180" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" fill="#E6EDF3">• 🍪 Database migration script</text>
+  <text x="83" y="194" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11" fill="#5AA7FF">@charlie</text>
+
+  <!-- Current header -->
+  <text x="73" y="220" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" fill="#E6EDF3">🔄 In Progress (2):</text>
+
+  <!-- Current items -->
+  <text x="73" y="238" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" fill="#E6EDF3">• Implement user dashboard</text>
+  <text x="83" y="252" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11" fill="#5AA7FF">@alice</text>
+
+  <text x="73" y="270" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" fill="#E6EDF3">• Setup CI/CD pipeline</text>
+  <text x="83" y="284" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11" fill="#5AA7FF">@dave</text>
 
   <!-- Summary -->
-  <line x1="30" y1="415" x2="380" y2="415" stroke="#3d5a73" stroke-width="1" opacity="0.5"/>
-  <text x="30" y="445" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#ffffff">📈 Итого:</text>
-  <text x="30" y="468" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#ff6b6b">• Просрочено: 5</text>
-  <text x="150" y="468" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#4ecdc4">• Текущее: 3</text>
+  <text x="73" y="310" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" fill="#E6EDF3">📈 Summary:</text>
+  <text x="73" y="328" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" fill="#E6EDF3">• Overdue: 3</text>
+  <text x="73" y="344" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" fill="#E6EDF3">• In Progress: 2</text>
 
-  <!-- Time -->
-  <text x="370" y="468" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6b7d8a">08:00</text>
+  <!-- Previous report link + time -->
+  <text x="73" y="355" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12" fill="#5AA7FF">📎 Previous report</text>
+  <text x="410" y="355" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11" fill="#6B7D8A" text-anchor="end">08:00</text>
 
-  <!-- Pin notification at bottom -->
-  <rect x="80" y="450" width="260" height="28" rx="14" fill="#1c2733"/>
-  <text x="210" y="469" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6b7d8a" text-anchor="middle">Zaebot pinned "📊 Ежедневный от..."</text>
+  <!-- Avatar -->
+  <circle cx="28" cy="350" r="17" fill="#8774E1"/>
+  <text x="28" y="356" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF" text-anchor="middle">T</text>
+
+  <!-- Pin notification bar -->
+  <rect x="110" y="390" width="220" height="22" rx="11" fill="#1C2733"/>
+  <text x="220" y="405" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11" fill="#8B9BA8" text-anchor="middle">TrelloBot pinned "📊 Daily Tre..."</text>
 </svg>
