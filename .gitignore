@@ -1,162 +1,73 @@
-# Byte-compiled / optimized / DLL files
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
-
-# C extensions
 *.so
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-/lib/
-/lib64/
-parts/
-*.json
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
 *.egg
-MANIFEST
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-# Unit test / coverage reports
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Package managers
+poetry.lock
+
+# Testing
+.pytest_cache/
+.coverage
 htmlcov/
 .tox/
 .nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-# Translations
-*.mo
-*.pot
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-*.db
-examples/data/test-db-aggregator.db
-# Flask stuff:
-instance/
-.webassets-cache
-# Scrapy stuff:
-.scrapy
-# Sphinx documentation
-docs/_build/
-# PyBuilder
-target/
-# Jupyter Notebook
-python-dca-tracker/.ipynb_checkpoints
-# IPython
-profile_default/
-ipython_config.py
-# pyenv
-.python-version
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#Pipfile.lock
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
-__pypackages__/
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
-# SageMath parsed files
-*.sage.py
-# Environments
-config.toml
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-# Spyder project settings
-.spyderproject
-.spyproject
-# Rope project settings
-.ropeproject
-# mkdocs documentation
-/site
-# mypy
+
+# Type checkers
 .mypy_cache/
-.dmypy.json
-dmypy.json
-# Pyre type checker
 .pyre/
-# Node / TS
-node_modules/
-coverage/
-.eslintcache
-.stylelintcache
-*.tsbuildinfo
-.next/
-out/
-.vercel/
-# Go
-bin/
-*.out
-*.test
-coverage.out
-go.work
-go.work.sum
-# vendor/  # раскоммить, если не хотите коммитить vendor
-# Editors / OS
+
+# IDE / Editors
 .vscode/
 .idea/
+.cursor/
 *.iml
 *.code-workspace
+
+# OS
 .DS_Store
 Thumbs.db
-# Temp / backups
-.cache/
-tmp/
-temp/
-*.tmp
-*.bak
-*.orig
-*.rej
-*.pid
-*~
+
 # Logs
 logs/
+*.log
 *.log.*
-# Envs & secrets
+
+# Secrets & Config
 .env
 .env.*
-.envrc
+config.yaml
+config.toml
 *.key
 *.pem
-config.yaml
-# DB & sessions
+
+# Project data
+*.json
 *.sqlite
 *.sqlite-journal
 *.session
 *.session-journal
-# Jupyter (глобально)
-.ipynb_checkpoints/
 
-poetry.lock
+# Claude Code
+.claude/
+.auto-claude/
+.claude-diary/
+.mcp.json
+
+# Temp
+tmp/
+temp/
+*.tmp
+*.bak
+*~

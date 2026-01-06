@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="assets/screenshot.png" alt="Trello Bot" width="400"/>
+  <img src="assets/telegram-report.svg" alt="Trello Bot" width="400"/>
   <br>
   🤖 Trello Telegram Tracker Bot
 </h1>
@@ -12,7 +12,7 @@
   <img src="https://img.shields.io/badge/Python-3.12+-blue.svg" alt="Python">
   <img src="https://img.shields.io/badge/aiogram-3.21+-green.svg" alt="aiogram">
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
-  <img src="https://img.shields.io/badge/dependency-poetry-blue" alt="Poetry">
+  <img src="https://img.shields.io/badge/dependency-uv-blue" alt="uv">
 </p>
 
 <p align="center">
@@ -62,14 +62,14 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/trello-telegram-tracker.git
+git clone https://github.com/DefaultPerson/trello-telegram-tracker.git
 cd trello-telegram-tracker
 
-# Install Poetry (if not already installed)
-pip install poetry
+# Install uv (if not already installed)
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # Install dependencies
-poetry install
+uv sync
 ```
 
 ### Configuration
@@ -112,11 +112,7 @@ poetry install
 
 ```bash
 # Make sure you've configured config.yaml first!
-poetry run python -m app
-
-# Or activate the virtual environment and run directly
-poetry shell
-python -m app
+uv run python -m app
 ```
 
 
@@ -127,7 +123,7 @@ python -m app
 - **[aiohttp](https://aiohttp.readthedocs.io)** - Async HTTP requests
 - **[aiofiles](https://github.com/Tinche/aiofiles)** - Async file operations
 - **[schedule](https://schedule.readthedocs.io)** - Task scheduling
-- **[Poetry](https://python-poetry.org)** - Dependency management
+- **[uv](https://docs.astral.sh/uv/)** - Dependency management
 
 ## 📋 Card State Detection
 
@@ -161,6 +157,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Made with ❤️ for better project management**
 
-[⭐ Star this repo](https://github.com/your-username/trello-telegram-tracker) if you find it useful!
+[⭐ Star this repo](https://github.com/DefaultPerson/trello-telegram-tracker) if you find it useful!
 
 </div>
+
+
+
