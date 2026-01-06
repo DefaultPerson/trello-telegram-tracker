@@ -71,3 +71,7 @@ temp/
 *.tmp
 *.bak
 *~
+
+# Claude
+docs/
+CLAUDE.md
